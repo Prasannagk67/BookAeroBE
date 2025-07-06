@@ -1,6 +1,6 @@
 # Stage 1: Build
 FROM maven:3.9.6-eclipse-temurin-17 AS build
-WORKDIR /usr/src/app/user_register_service
+WORKDIR /usr/src/app
 COPY . .
 RUN mvn clean package -DskipTests -Dquarkus.package.type=uber-jar
 
