@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: keycloak-service
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: Keycloak
+        value: admin
+      - key: Keycloak123
+        value: admin
+    autoDeploy: true
+    buildCommand: ""
+    startCommand: ""
