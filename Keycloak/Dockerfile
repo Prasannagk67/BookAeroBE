@@ -1,7 +1,11 @@
 FROM quay.io/keycloak/keycloak:24.0.3
 
-# Use in-memory dev DB instead of removed 'dev'
+# Set up dev DB (in-memory)
 ENV KC_DB=dev-mem
+
+# Set Keycloak admin credentials
+ENV KEYCLOAK_ADMIN=admin
+ENV KEYCLOAK_ADMIN_PASSWORD=admin
 
 RUN /opt/keycloak/bin/kc.sh build
 
