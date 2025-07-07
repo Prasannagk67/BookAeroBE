@@ -8,4 +8,4 @@ RUN /opt/keycloak/bin/kc.sh build
 EXPOSE 9091
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
-CMD ["start-dev", "--http-port=9091", "--hostname-strict=false"]
+CMD ["start-dev", "--http-port=9091", "--hostname-strict=false", "--hostname-strict-https=false", "--http-host=0.0.0.0"]
