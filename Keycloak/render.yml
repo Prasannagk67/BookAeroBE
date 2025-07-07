@@ -4,7 +4,7 @@ services:
     env: docker
     plan: free
     dockerfilePath: ./Dockerfile
-    port: 9091  # Explicitly tell Render which port to use
+    port: 9091
     envVars:
       - key: KEYCLOAK_ADMIN
         value: admin
