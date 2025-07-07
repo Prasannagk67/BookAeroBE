@@ -5,7 +5,9 @@ ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=admin123
 ENV KC_HOSTNAME_STRICT=false
 ENV KC_HTTP_PORT=9091
-ENV KC_DB=dev-file  # Use simple file-based H2 database for testing
+
+# Use simple file-based H2 database for testing
+ENV KC_DB=dev-file
 
 # Then run build
 RUN /opt/keycloak/bin/kc.sh build --db=dev-file
